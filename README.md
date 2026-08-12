@@ -9,7 +9,7 @@ Que tal refletirmos um pouco sobre o que acontece com esse código quando novos 
 Altere o código da classe PlanetasPrinter que os planetas também possam ser impresso. 
 Tente fazer isso com o menor esforço possível.
 
-Verifique a classe br.pucpr.Planeta
+Verifique a classe [br.pucpr.Planet](https://github.com/ViniGodoy/design-patterns/edit/aula-01-ex/README.md#:~:text=Planet-,.,-java)
 
 O formato de impressão da tabela (bordas, temas) deve ser exatamente igual ao da tabela de usuários.
 
