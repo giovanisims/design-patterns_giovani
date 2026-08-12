@@ -27,8 +27,7 @@ public class PlanetasPrinter {
       // 1 uma unidade astronomica (UA) é equivalente à distância da Terra ao Sol.
       double sunDistanceUa = (double) planeta.sunDistanceKm() / 149_600_000L;
 
-      switch (planeta.type()){
-        case ROCK:
+      if (planeta.type() == ROCK) {
           sb.append(
                   String.format(
                           "| %-8s | %-10s | %-14s | %-14s | %-8s |%n",
@@ -37,33 +36,33 @@ public class PlanetasPrinter {
                           String.format("%,d", planeta.sunDistanceKm()),
                           String.format("%,.2f", sunDistanceUa),
                           "Rochoso"));
-        case GAS:
-          sb.append(
-                  String.format(
-                          "| %-8s | %-10s | %-14s | %-14s | %-8s |%n",
-                          planeta.name(),
-                          String.format("%,.1f", planeta.diameterKm()),
-                          String.format("%,d", planeta.sunDistanceKm()),
-                          String.format("%,.2f", sunDistanceUa),
-                          "Gasoso")); // Prof você escreveu gasoso errado no readme
-        case ICE:
-          sb.append(
-                  String.format(
-                          "| %-8s | %-10s | %-14s | %-14s | %-8s |%n",
-                          planeta.name(),
-                          String.format("%,.1f", planeta.diameterKm()),
-                          String.format("%,d", planeta.sunDistanceKm()),
-                          String.format("%,.2f", sunDistanceUa),
-                          "Gelado"));
-        case DWARF:
-          sb.append(
-                  String.format(
-                          "| %-8s | %-10s | %-14s | %-14s | %-8s |%n",
-                          planeta.name(),
-                          String.format("%,.1f", planeta.diameterKm()),
-                          String.format("%,d", planeta.sunDistanceKm()),
-                          String.format("%,.2f", sunDistanceUa),
-                          "Anão"));
+      } else if (planeta.type() == GAS) {
+        sb.append(
+                String.format(
+                        "| %-8s | %-10s | %-14s | %-14s | %-8s |%n",
+                        planeta.name(),
+                        String.format("%,.1f", planeta.diameterKm()),
+                        String.format("%,d", planeta.sunDistanceKm()),
+                        String.format("%,.2f", sunDistanceUa),
+                        "Gasoso")); // Prof você escreveu gasoso errado no readme
+      } else if (planeta.type() == ICE) {
+        sb.append(
+                String.format(
+                        "| %-8s | %-10s | %-14s | %-14s | %-8s |%n",
+                        planeta.name(),
+                        String.format("%,.1f", planeta.diameterKm()),
+                        String.format("%,d", planeta.sunDistanceKm()),
+                        String.format("%,.2f", sunDistanceUa),
+                        "Gelado"));
+      } else if (planeta.type() == DWARF) {
+        sb.append(
+                String.format(
+                        "| %-8s | %-10s | %-14s | %-14s | %-8s |%n",
+                        planeta.name(),
+                        String.format("%,.1f", planeta.diameterKm()),
+                        String.format("%,d", planeta.sunDistanceKm()),
+                        String.format("%,.2f", sunDistanceUa),
+                        "Anão"));
       }
 
       // Borda inferior
