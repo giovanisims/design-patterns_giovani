@@ -25,7 +25,11 @@ Quanto aos dados:
 Ao final da implementação reflita:
 
 1. Sua solução ficou com muito código duplicado?
+
+Ficou com uma quantidade considerável de código duplicado principalmente por que tive de copiar grande parte do código da classe de impressão do UsersPrinter, mas também por que tive de duplicar a propria ‘string’ que é impressa para poder "traduzir" os tipos de planeta
 2. O que aconteceria se uma terceira classe tivesse que ser adicionada?
+
+Toda essa lógica de impressão e formatação teria de ser duplicada mais uma vez 
 
 ---
 

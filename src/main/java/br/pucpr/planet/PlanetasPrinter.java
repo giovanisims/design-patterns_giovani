@@ -45,7 +45,7 @@ public class PlanetasPrinter {
                           String.format("%,.1f", planeta.diameterKm()),
                           String.format("%,d", planeta.sunDistanceKm()),
                           String.format("%,.2f", sunDistanceUa),
-                          "Gasoso")); // Prof você escrever gasoso errado no readme
+                          "Gasoso")); // Prof você escreveu gasoso errado no readme
         case ICE:
           sb.append(
                   String.format(
