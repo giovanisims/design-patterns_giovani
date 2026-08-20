@@ -9,14 +9,13 @@ public class Table {
     private static final String FINAL_SEPARATOR = " |\n";
     private static final String RIGHT_ALIGN_PADDING = " ".repeat(20);
 
-    public <T extends TableData<T>> void print(List<T> items, boolean allignRight, Theme theme) {
+    public <T> void print(List<T> items, TableData<T> tableData, boolean alignRight, Theme theme) {
         if (items == null || items.isEmpty()) {
             System.out.println("ERRO: Lista de usuários vazia ou nula.");
             return;
         }
 
         final String borderChar = theme.getBorderChar();
-        TableData<T> tableData = items.get(0);
         List<String> headers = tableData.getHeaders();
 
         int headerLength = 0;
@@ -61,7 +60,7 @@ public class Table {
 
         sb.repeat(borderChar, borderWidth).append("\n");
 
-        if (allignRight) {
+        if (alignRight) {
             var lines = sb.toString().split("\n");
             for (var line : lines) {
                 System.out.println(RIGHT_ALIGN_PADDING + line);
