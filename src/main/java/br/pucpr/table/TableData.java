@@ -1,5 +1,9 @@
 package br.pucpr.table;
 
-public interface TableData {
-  // Monte aqui sua interface TableData
+import java.util.List;
+
+public interface TableData<T> {
+    List<String> getHeaders();
+
+    List<String> getRowValues(T row);
 }
