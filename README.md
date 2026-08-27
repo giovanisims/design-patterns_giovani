@@ -1,15 +1,6 @@
 # Atividade
 
-Vamos separar nossas classes em diferentes responsabilidades através do padrão de projetos Adapter.
----
-
-## 🎯 Objetivo da Atividade
-
-1. Crie a interface br.pucpr.table.TableData para representar os dados de uma tabela (TableData)
-2. Refatore as classes UsersPrinter e PlanetasPrinter para ter uma única classe Table
-3. A largura da coluna será dada pela largura do seu cabeçalho.
-
----
+Termine de implementaras classes filhas de ColumnData para desenhar a tabela de usuários.
 
 ## 🛠️ Requisitos para Execução
 
